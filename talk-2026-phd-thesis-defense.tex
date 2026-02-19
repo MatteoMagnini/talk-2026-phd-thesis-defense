@@ -11,6 +11,8 @@
 \usepackage[utf8]{inputenc}
 %
 \usepackage{talk-2026-phd-thesis-defense}
+\usepackage{blkarray}
+\usepackage{multicol}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title[Short Title]{
     % same title of the presented paper
@@ -77,43 +79,46 @@
 
 %===============================================================================
 \section{Motivation \& Context}
+\label{sec:motivation-&-context}
 %===============================================================================
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}[c]{Context}
-    
-    Provide some context (max 4-5 items):
-    %
-    \vfill
-    %
-    \begin{itemize}
-        \item fact 1
+\begin{frame}[c]{Symbolic Knowledge}
+    \begin{exampleblock}{Definition}
+        Symbolic knowledge is a type of \ac{KR} that uses \emph{symbols} to represent concepts, objects, and relationships in a structured and interpretable way.
         %
+        Symbolic \ac{KR} approaches must:
         \begin{itemize}
-            \item note
+            \item involve a set of symbols;
+            \item symbols can be combined following a set of rules;
+            \item symbols and combinations of symbols can be assigned a meaning.
         \end{itemize}
-        
-        \vfill
-        
-        \item[$\Rightarrow$] fact 2 implied by fact 1
-        %
-        \begin{itemize}
-            \item[!] important \alert{notice}
-        \end{itemize}
-        
-        \vfill
-        
-        \item fact 3
-        %
-        \begin{itemize}
-            \item note
-        \end{itemize}
-        
-        \vfill
-        
-        \item fact 4
-        
-    \end{itemize}
+    \end{exampleblock}
+
+    \begin{alertblock}{Applications}
+        \begin{multicols}{3}
+            {\small
+                \begin{itemize}
+                    \item Reasoning
+                    \item Logic programming
+                    \item Planning
+                \end{itemize}
+            }
+        \end{multicols}
+    \end{alertblock}
+
+    \begin{block}{Limits}
+        \begin{multicols}{3}
+            {\small
+                \begin{itemize}
+                    \item Brittle \& inflexible
+                    \item Acquire \& maintain
+                    \item Slow
+                \end{itemize}
+            }
+        \end{multicols}
+    \end{block}
+
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
 
