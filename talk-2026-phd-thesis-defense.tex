@@ -13,6 +13,7 @@
 \usepackage{talk-2026-phd-thesis-defense}
 \usepackage{blkarray}
 \usepackage{multicol}
+\usepackage{graphicx}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title[SKI \& SKE for Autonomous Learning]{
     % same title of the presented paper
@@ -24,10 +25,10 @@
 % \subtitle{Extended Abstract}
 %
 % same authors order of the presented paper
-\author[Magnini]{
-	\emph{Matteo Magnini}$^{*,\dagger}$
+\author[\sspeaker{M. Magnini}]{
+	\speaker{Matteo Magnini}$^{*,\dagger}$
     \and
-    \textbf{Supervisor:} Andrea Omicini$^{*}$
+    \textbf{Supervisor:} \speaker{Andrea Omicini}$^{*}$
 }
 %
 \institute[UniBo, UniLu]{
@@ -90,8 +91,8 @@
         Symbolic \ac{KR} approaches must:
         \begin{itemize}
             \item involve a set of symbols;
-            \item symbols can be combined following a set of rules;
-            \item symbols and combinations of symbols can be assigned a meaning.
+            \item symbols can be \emph{combined} following a set of rules;
+            \item symbols and combinations of symbols can be \emph{assigned a meaning}.
         \end{itemize}
     \end{exampleblock}
 
@@ -160,9 +161,64 @@
 %\\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}{Some state of the art (optional)}
+\begin{frame}[c]{Thesis Goal}
+  \begin{alertblock}{Thesis Goal}
+    Develop methodologies and frameworks to engineer intelligent \ac{AI} systems,
+    focusing on \emph{\ac{SKI}} and \emph{\ac{SKE}} as foundations for human-like, autonomous, and interpretable artificial intelligence.
+    %
+    This thesis aims to bridge symbolic and sub-symbolic paradigms, enabling \ac{AI} systems to learn, reason, and adapt transparently and robustly.
+  \end{alertblock}
 
-    Provide relevant information about the state of the art / related works here, possibly with references
+  \begin{exampleblock}{Multi-Faceted Scientific Problem}
+    \begin{itemize}
+      \item \textbf{How} to \underline{inject} and \underline{extract} symbolic knowledge in sub-symbolic models (methods, taxonomies, tools)
+      \item \textbf{How} to \emph{measure} the impact of \ac{SKI} and \ac{SKE} on accuracy, \underline{robustness}, and \underline{interpretability} (evaluation metrics)
+      \item \textbf{How} to design \ac{NeSy} \ac{AI} systems leveraging \ac{SKI}/\ac{SKE} in practical, high-stakes domains (software frameworks \& real-world deployment)
+      \item \textbf{How} to mitigate social and technical risks, e.g., bias, using \ac{SKI} techniques (trustworthiness \& ethics)
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}{SKI landscape -- How to inject: constraining}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=.8\textwidth]{figures/workflow-constraining}
+        \label{fig:ski-constraining-workflow}
+    \end{figure}
+
+\end{frame}
+%\\\\\\\\\\\\\\\\\\\\\
+
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}{SKI landscape -- How to inject: structuring}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=.8\textwidth]{figures/workflow-structuring}
+        \label{fig:ski-structuring-workflow}
+    \end{figure}
+
+\end{frame}
+%\\\\\\\\\\\\\\\\\\\\\
+
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}{SKI landscape -- How to inject: embedding}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=.8\textwidth]{figures/workflow-embedding}
+        \label{fig:ski-embedding-workflow}
+    \end{figure}
+
+\end{frame}
+%\\\\\\\\\\\\\\\\\\\\\
+
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}{SKE landscape}
+
+
 
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
