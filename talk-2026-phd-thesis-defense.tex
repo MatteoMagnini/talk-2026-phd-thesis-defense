@@ -161,6 +161,15 @@
 %\\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[c]{AI Overview}
+    \begin{figure}
+        \centering
+        \includegraphics[width=.95\textwidth]{figures/ai-map2}
+        \label{fig:ai-overview}
+    \end{figure}
+\end{frame}
+
+%\\\\\\\\\\\\\\\\\\\\\
 \begin{frame}[c]{Thesis Goal}
   \begin{alertblock}{Thesis Goal}
     Develop methodologies and frameworks to engineer intelligent \ac{AI} systems,
@@ -216,22 +225,40 @@
 %\\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}{SKE landscape}
+\begin{frame}{SKI landscape -- Taxonomy}
 
-
+    \begin{figure}
+        \centering
+        \includegraphics[width=.9\textwidth]{figures/ski-taxonomy}
+        \label{fig:ski-taxonomy}
+    \end{figure}
 
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}{Contribution of the paper}
+\begin{frame}{SKE landscape -- How to extract: Decomposional vs. Pedagogical SKE}
 
-\begin{block}{Explicitly state the contributions of the paper}
-    \begin{itemize}
-        \item contribution 1
-        \item contribution 2
-    \end{itemize}
-\end{block}
+    \begin{exampleblock}{Decompositional SKE Definition}
+        if the method \emph{needs} to inspect (even partially) the internal parameters of the underlying black-box predictor,
+        e.g., neuron biases or connection weights for \acp{NN}, or support vectors for \acp{SVM}.
+    \end{exampleblock}
+
+    \begin{exampleblock}{Pedagogical SKE Definition}
+        if the algorithm \emph{does not need} to take into account any internal parameter,
+        but it can extract symbolic knowledge by only relying on the predictor's outputs.
+    \end{exampleblock}
+
+\end{frame}
+
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}{SKE landscape -- Taxonomy}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=.9\textwidth]{figures/ske-taxonomy}
+        \label{fig:ske-taxonomy}
+    \end{figure}
 
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
