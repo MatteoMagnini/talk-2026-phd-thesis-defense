@@ -237,7 +237,7 @@
 %\\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}{SKE landscape -- How to extract: Decomposional vs. Pedagogical SKE}
+\begin{frame}[c]{SKE landscape -- How to extract: Decomposional vs. Pedagogical SKE}
 
     \begin{exampleblock}{Decompositional SKE Definition}
         if the method \emph{needs} to inspect (even partially) the internal parameters of the underlying black-box predictor,
@@ -264,23 +264,148 @@
 %\\\\\\\\\\\\\\\\\\\\\
 
 %===============================================================================
-\section{Theory / modelling / design}
+\section{SKI -- Design \& Implementation}
+\label{sec:design-&-implementation}
 %===============================================================================
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}%[allowframebreaks]
-\frametitle{Theory / modelling / design}
+\begin{frame}[c]{PSyKI -- Platform for Symbolic Knowledge Injection}
 
-    Provide 2-3 slides discussing the Theory / modelling / design
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/knowledge-workflow-psyki}
+        \label{fig:knowledge-workflow-psyki}
+    \end{figure}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.95\textwidth]{figures/psyki-workflow}
+        \label{fig:psyki-workflow}
+    \end{figure}
 
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
 
-\section{Case study / Experiments / Results}
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[c]{PSyKI -- Knowledge Injection Workflow}
+
+    \begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/class-diagram}
+    \label{fig:psyki-class-diagram}
+\end{figure}
+
+\end{frame}
+
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[c]{Knowledge Injection via Lambda Layer (KILL) -- Overview}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=.8\textwidth]{figures/lambda-layer}
+        \label{fig:lambda-layer}
+    \end{figure}
+
+\end{frame}
+%\\\\\\\\\\\\\\\\\\\\\
+
+
+%\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[c]{KILL -- Validation and Results on the Poker Hand Dataset}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=.95\textwidth]{figures/phds-results}
+        \label{fig:kill-results}
+    \end{figure}
+
+\end{frame}
+%\\\\\\\\\\\\\\\\\\\\\
+
+%\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[c]{Knowledge Injection via Network Structuring (KINS) -- Overview}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\textwidth]{figures/kins-network-architecture}
+        \label{fig:kins-network-architecture}
+    \end{figure}
+
+    \begin{figure}
+        \centering
+        \def\astscale{0.3}
+        \begin{subfigure}[]{0.2\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{figures/ast-flush-1}
+            \label{fig:ast-kins-unencoded}
+        \end{subfigure}
+        \hfill$\rightarrow$\hfill
+        \begin{subfigure}[]{0.3\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{figures/ast-flush-2}
+            \label{fig:ast-kins-optimised}
+        \end{subfigure}
+        \hfill$\rightarrow$\hfill
+        \begin{subfigure}[]{0.3\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{figures/net-flush}
+            \label{fig:net-kins-encoded}
+        \end{subfigure}
+        \label{fig:ast-kins}
+    \end{figure}
+
+\end{frame}
+%\\\\\\\\\\\\\\\\\\\\\
+
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[c]{Quality of Service Metrics}
+
+    \small
+    \vspace{-2ex}
+    \begin{tabular}{p{0.46\textwidth} p{0.46\textwidth}}
+    % --- MEMORY FOOTPRINT ---
+    \textbf{Memory Footprint} $\mu$ \newline
+    $\mu_{\Psi, K, N}(\mathcal{I}) = \Psi(N) - \Psi(\mathcal{I}(K, N))$ \newline
+    \footnotesize
+    \textit{Saved model size after SKI; counts params, FLOPs, MACs.}
+    &
+    % --- ENERGY EFFICIENCY ---
+    \textbf{Energy Eff.} $\varepsilon^\mathsf{i}$ \newline
+    $\varepsilon^\mathsf{i}_{\upsilon, K, N, T}(\mathcal{I}) =
+    \Upsilon^{\mathsf{i}}_\upsilon(N, T) - \Upsilon^{\mathsf{i}}_\upsilon(\hat{N}, T)$ \newline
+    \footnotesize
+    \textit{Energy saved by SKI, during inference (or training).}
+    \\
+    % --- LATENCY ---
+    \textbf{Latency Gain} $\lambda$ \newline
+    $\lambda_{K, N, T}(\mathcal{I}) = \Lambda(N, T) - \Lambda(\hat{N}, T)$ \newline
+    \footnotesize
+    \textit{Faster average inference after SKI (lower is better).}
+    &
+    % --- DATA EFFICIENCY ---
+    \textbf{Data Efficiency} $\delta$ \newline
+    $\delta = \Delta_\pi(e,N,D,T) - \Delta_\pi(e,\hat{N},D',T)$ \newline
+    \footnotesize
+    \textit{Less data required to reach target performance.}
+    \end{tabular}
+    \vspace{1ex}
+    % --- ROBUSTNESS ---
+
+    \centering
+    \textbf{Robustness} $R_{N, D}(\mathcal{I}) = \frac{\rho_{\hat{N}, D}(\mathcal{D})}{\rho_{N, D}(\mathcal{D})}$ \quad
+    {\footnotesize Measures resilience to data perturbations. $R>1$: SKI more robust.}
+
+\end{frame}
+%\\\\\\\\\\\\\\\\\\\\\
+
+%===============================================================================
+\section{NeSy AI Applications}
+\label{sec:case-study}
+%===============================================================================
 
 %\\\\\\\\\\\\\\\\\\\\\
 \begin{frame}%[allowframebreaks]
-\frametitle{Case study / Experiments / Results}
+\frametitle{SKE for Explainable Nutritional Recommender System}
 
     Provide 2-3 slides discussing the Case study / Experiments / Results of the paper
 
