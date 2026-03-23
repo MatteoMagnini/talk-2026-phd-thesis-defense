@@ -404,13 +404,147 @@
 %===============================================================================
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}%[allowframebreaks]
-\frametitle{SKE for Explainable Nutritional Recommender System}
+\begin{frame}[c]{SKE for Explainable Nutritional Recommender System}
 
-    Provide 2-3 slides discussing the Case study / Experiments / Results of the paper
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.65\textwidth]{figures/ske-recommender-workflow}
+        \label{fig:ske-recommender-workflow}
+    \end{figure}
 
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
+
+%\\\\\\\\\\\\\\\\\\\\\
+    \begin{frame}[c]{General Purpose Protocol for Multi-Agent Explanations}
+        \begin{figure}
+        \centering
+        \includegraphics[width=0.6\linewidth]{figures/user-agent-protocol}
+        \label{fig:protocol-messages}
+    \end{figure}
+
+    \begin{figure}
+        \centering{
+            \begin{subfigure}[t]{0.19\linewidth}
+                \centering
+                \includegraphics[width=\linewidth]{figures/quick-accept}
+                \caption{Quick accept}
+                \label{fig:quick-accept}
+            \end{subfigure}
+            \hfill%\vline\hfill
+            \begin{subfigure}[t]{0.19\linewidth}
+                \centering
+                \includegraphics[width=\linewidth]{figures/quick-retry}
+                \caption{Quick retry}
+                \label{fig:quick-retry}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}[t]{0.19\linewidth}
+                \centering
+                \includegraphics[width=\linewidth]{figures/explanation-loop}
+                \caption{Ordinary explanation loop}
+                \label{fig:explanation-loop}
+            \end{subfigure}
+            \hfill%\vline\hfill
+            \begin{subfigure}[t]{0.19\linewidth}
+                \centering
+                \includegraphics[width=\linewidth]{figures/contrastive-explanation-loop}
+                \caption{Contrastive explanation loop}
+                \label{fig:contrastive-explanation-loop}
+            \end{subfigure}
+        }
+        \caption{Sequence diagrams describing most common scenarios of the protocol.}
+        \label{fig:protocol-sequence-diagrams}
+    \end{figure}
+
+\end{frame}
+%\\\\\\\\\\\\\\\\\\\\
+
+%\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[c]{NeSy AI for Disease Diagnosis \& Monitoring}
+    \footnotesize
+    \textbf{Goal}: Inject clinical knowledge via \ac{LTN} into neural models for diabetes diagnosis dataset.
+
+    %--- MODELS & INFO ---
+    \textbf{Evaluated models:} KNN, LR, DT, RF, MLP, \textbf{LTN}
+    \begin{align*}
+        &\forall x.\, (\text{glucose}(x) \geq 125 \land \text{bmi}(x) \geq 30 \rightarrow \text{Diabetic}(x)) \\
+        &\forall x.\, (\text{glucose}(x) \leq 100 \land \text{bmi}(x) \leq 25 \rightarrow \neg \text{Diabetic}(x))
+    \end{align*}
+
+    \vspace{-1mm}
+    %--- METRICS ---
+    \textbf{Metrics:} accuracy, balanced accuracy, recall, F1, \ac{MCC}, logic adherence, robustness.
+
+    %--- RESULTS TABLE ---
+    \input{tables/ski-diabetes-performance-metrics}
+
+    \textbf{Robustness:} \textbf{LTN} outperforms all models under noise, label flipping, and data drop.
+    Maintains highest recall even with high perturbation rates.
+
+\end{frame}
+%\\\\\\\\\\\\\\\\\\
+
+%===============================================================================
+\section{Autonomous Learning Systems}
+\label{sec:autonomous-learning-systems}
+%===============================================================================
+
+\begin{frame}[c]{Ontology Instantiation with LLMs (KGFiller)}
+
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/roadmap}
+    \label{fig:roadmap}
+
+\end{frame}
+
+\begin{frame}[c]{KGFiller -- Validation \& Results}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{figures/ontology-skeleton}
+        \label{fig:ontology}
+    \end{figure}
+
+    \vspace{0.7em}
+
+    \hfill
+    \begin{minipage}{0.4\linewidth}
+        \input{tables/kgfiller-qos}
+    \end{minipage}\hspace{0.02\linewidth}%
+    \hfill
+    \begin{minipage}{0.4\linewidth}
+        \centering
+        \includegraphics[width=0.95\linewidth]{figures/comparison}
+        \label{fig:compare-performance}
+    \end{minipage}
+    \hfill
+
+\end{frame}
+
+\begin{frame}[c]{Active Learning EL Ontologies from LLMs}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\textwidth]{figures/active-learning-framework}
+        \label{fig:ontology-extraction-workflow}
+    \end{figure}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\textwidth]{figures/active-learning-algorithm}
+        \label{fig:ontology-extraction-results}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}[c]{ExactLearner+LLM -- Validation \& Results}
+
+    %\input{tables/small-ontologies}
+
+\end{frame}
+
+
 
 \section{Conclusions \& future works}
 
