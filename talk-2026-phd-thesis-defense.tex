@@ -488,6 +488,50 @@
 \end{frame}
 %\\\\\\\\\\\\\\\\\\
 
+%\\\\\\\\\\\\\\\\\\
+\begin{frame}{Enforcing Fairness via Constraint Injection~\ccite{DBLP:conf/aequitas/MagniniCCO24}}
+    \small
+    \textbf{Goal:} \quad Enforce group fairness in ML via generic constraint injection, agnostic to attribute type (\textit{binary, categorical, continuous}).
+    \vspace{-1em}
+    \begin{columns}[c]
+        \column{0.57\textwidth}
+            \textbf{Generalized Fairness Constraints:}
+            \begin{itemize}
+              \item[] \textbf{Demographic parity:}
+                \(
+                  DP_{h, A}(X) = \sum_{a \in A} \lVert E[h(X)|A{=}a] - E[h(X)] \rVert
+                \)
+              \item[] \textbf{Disparate impact:}
+                \(
+                  DI_{h, A}(X) = \min\left(\frac{E[h(X)|A{=}1]}{E[h(X)|A{=}0]},\,\frac{E[h(X)|A{=}0]}{E[h(X)|A{=}1]}\right)
+                \)
+              \item[] \textbf{Equalized odds:}
+                \(
+                  EO_{h,A}(X) = \sum_{(a, y)} eo_{h,A}(X,a,y)
+                \)\\
+                \(
+                  eo_{h,A}(X,a,y) = \lVert E[h(X)|A{=}a,Y{=}y] - E[h(X)|Y{=}y] \rVert
+                \)
+            \end{itemize}
+            \textbf{Combined loss:}
+                \[
+                    L_{h,A}(X,Y) = (1 - \lambda) E(h(X),Y) + \lambda F_{h,A}(X)
+                \]
+        \column{0.41\textwidth}
+            \centering
+            \vspace{-0.7em}
+            \includegraphics[width=0.95\linewidth]{figures/demographic_parity_ethnicity}
+            \\
+            \vspace{0.5em}
+            \includegraphics[width=0.95\linewidth]{figures/demographic_parity_sex}
+    \end{columns}
+
+    %\vspace{0.6em}
+    %\textit{FaUCI is flexible: supports any group fairness metric (\textbf{DP}, \textbf{DI}, \textbf{EO}), any attribute type, and integrates seamlessly as a fairness penalty. Demonstrated sharp improvements on Adult (gender/ethnicity/age) and other datasets.}
+
+\end{frame}
+%\\\\\\\\\\\\\\\\\\
+
 %===============================================================================
 \section{Autonomous Learning Systems}
 \label{sec:autonomous-learning-systems}
