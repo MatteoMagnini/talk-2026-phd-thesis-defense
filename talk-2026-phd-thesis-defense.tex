@@ -5,7 +5,7 @@
 %\documentclass[presentation]{beamer}\mode<presentation>{\usetheme{blackAMSBolognaFC}}
 \documentclass[presentation]{beamer}\mode<presentation>{\usetheme{AMSBolognaFC}}
 %\documentclass[handout]{beamer}\mode<handout>{\usetheme{AMSBolognaFC}}
-% \setbeamertemplate{bibliography item}{\insertbiblabel}
+%\setbeamertemplate{bibliography item}{\insertbiblabel}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
@@ -84,7 +84,7 @@
 %===============================================================================
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}[c]{Symbolic Knowledge}
+\begin{frame}[c]{Symbolic Knowledge~\ccite{DBLP:journals/csur/CiattoSAMO24}}
     \begin{exampleblock}{Definition}
         Symbolic knowledge is a type of \ac{KR} that uses \emph{symbols} to represent concepts, objects, and relationships in a structured and interpretable way.
         %
@@ -124,7 +124,7 @@
 %\\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}[c]{Sub-symbolic Approaches}
+\begin{frame}[c]{Sub-symbolic Approaches~\ccite{DBLP:journals/csur/CiattoSAMO24}}
     \begin{exampleblock}{Definition}
         Sub-symbolic knowledge is a type of \ac{KR} that represents information in a \emph{distributed} and implicit manner,
         often using \emph{numerical values} or \emph{vectors} to encode concepts and relationships.
@@ -269,7 +269,7 @@
 %===============================================================================
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}[c]{PSyKI -- Platform for Symbolic Knowledge Injection}
+\begin{frame}[c]{PSyKI -- Platform for Symbolic Knowledge Injection~\ccite{DBLP:conf/atal/MagniniCO22}}
 
     \begin{figure}
         \centering
@@ -298,7 +298,7 @@
 \end{frame}
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}[c]{Knowledge Injection via Lambda Layer (KILL) -- Overview}
+\begin{frame}[c]{Knowledge Injection via Lambda Layer (KILL) -- Overview~\ccite{DBLP:conf/woa/MagniniCO22}}
 
     \begin{figure}
         \centering
@@ -323,7 +323,7 @@
 %\\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\
-\begin{frame}[c]{Knowledge Injection via Network Structuring (KINS) -- Overview}
+\begin{frame}[c]{Knowledge Injection via Network Structuring (KINS) -- Overview~\ccite{DBLP:conf/cilc/MagniniCO22}}
 
     \begin{figure}
         \centering
@@ -358,7 +358,7 @@
 %\\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}[c]{Quality of Service Metrics}
+\begin{frame}[c]{Quality of Service Metrics~\ccite{DBLP:journals/aamas/AgiolloRMCO23,DBLP:conf/woa/RafanelliMACO24}}
 
     \small
     \vspace{-2ex}
@@ -404,7 +404,7 @@
 %===============================================================================
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}[c]{SKE for Explainable Nutritional Recommender System}
+\begin{frame}[c]{SKE for Explainable Nutritional Recommender System~\ccite{DBLP:journals/cmpb/MagniniCCAO23}}
 
     \begin{figure}
         \centering
@@ -416,7 +416,7 @@
 %\\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\\
-    \begin{frame}[c]{General Purpose Protocol for Multi-Agent Explanations}
+    \begin{frame}[c]{General Purpose Protocol for Multi-Agent Explanations~\ccite{DBLP:conf/extraamas/CiattoMBAO23}}
         \begin{figure}
         \centering
         \includegraphics[width=0.6\linewidth]{figures/user-agent-protocol}
@@ -461,7 +461,7 @@
 %\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\
-\begin{frame}[c]{NeSy AI for Disease Diagnosis \& Monitoring}
+\begin{frame}[c]{NeSy AI for Disease Diagnosis \& Monitoring~\ccite{DBLP:conf/percom/MagniniCKSM25}}
     \footnotesize
     \textbf{Goal}: Inject clinical knowledge via \ac{LTN} into neural models for diabetes diagnosis dataset.
 
@@ -490,14 +490,40 @@
 \label{sec:autonomous-learning-systems}
 %===============================================================================
 
-\begin{frame}[c]{Ontology Instantiation with LLMs (KGFiller)}
+
+%\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[c]{Closing the circle~\ccite{DBLP:conf/aiia/MagniniCO22}}
+
+    \begin{figure}[t]
+        \centering
+        \begin{subfigure}[t]{0.49\linewidth} % <--- [t] per top alignment
+            \centering
+            \includegraphics[width=\linewidth]{figures/cl-agent}
+            \label{fig:cl-agent-architecture}
+        \end{subfigure}%
+        \hfill
+        \begin{subfigure}[t]{0.49\linewidth} % <--- [t] per top alignment
+            \centering
+            \includegraphics[width=\linewidth]{figures/ctl-agent}
+            \label{fig:ctl-agent-architecture}
+        \end{subfigure}
+        \label{fig:architectures}
+    \end{figure}
+
+\end{frame}
+%\\\\\\\\\\\\\\\\\\\\
+
+%\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[c]{Ontology Instantiation with LLMs (KGFiller)~\ccite{DBLP:journals/kbs/CiattoAMO25}}
 
     \centering
     \includegraphics[width=0.95\textwidth]{figures/roadmap}
     \label{fig:roadmap}
 
 \end{frame}
+%\\\\\\\\\\\\\\\\\\\\
 
+%\\\\\\\\\\\\\\\\\\\\
 \begin{frame}[c]{KGFiller -- Validation \& Results}
 
     \begin{figure}
@@ -521,8 +547,10 @@
     \hfill
 
 \end{frame}
+%\\\\\\\\\\\\\\\\\\\\
 
-\begin{frame}[c]{Active Learning EL Ontologies from LLMs}
+%\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[c]{Active Learning EL Terminologies from LLMs~\ccite{DBLP:conf/ecai/MagniniSSO25}}
 
     \begin{figure}
         \centering
@@ -537,41 +565,43 @@
     \end{figure}
 
 \end{frame}
+%\\\\\\\\\\\\\\\\\\\\
 
+%\\\\\\\\\\\\\\\\\\\\
 \begin{frame}[c]{ExactLearner+LLM -- Validation \& Results}
 
-    %\input{tables/small-ontologies}
+    \input{tables/small-ontologies}
+    \input{tables/animal}
 
 \end{frame}
+%\\\\\\\\\\\\\\\\\\\\
 
 
 
+%=========================================
 \section{Conclusions \& future works}
+\label{sec:conclusions-&-future-works}
+%=========================================
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}%[allowframebreaks]
-\frametitle{Conclusions \& future works}
+\begin{frame}
+\frametitle{Conclusions \& Future Works}
 
 \begin{block}{Summing up}
-    Summarise the most relevant contributions of this study:
-    %
     \begin{itemize}
-        \item conclusion 1
-        \item conclusion 2
-        \item conclusion 3
+        \item Comprehensive survey and taxonomy of \emph{over 200 methods}.
+        \item Development of new SKI algorithms and formalization of QoS metrics for benchmarking.
+        \item Design of new NeSy application solutions for real-world scenarios.
+        \item Prototyping of \emph{autonomous learning frameworks} integrating symbolic knowledge injection and data-driven learning.
     \end{itemize}
 \end{block}
 
 \begin{exampleblock}{Future works}
-    Sketch some future research directions
-    %
     \begin{itemize}
-        \item future work 1
-        \item future work 2
+        \item Extend symbolic injection and reasoning to \emph{non-classical logics}.
+        \item Bridge NeSy research with the development of \emph{normative AI systems} and robotic agents that are compliant with legal and ethical requirements.
     \end{itemize}
 \end{exampleblock}
-
-(may be split into 2 slides)
 
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
