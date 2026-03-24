@@ -86,9 +86,9 @@
 %\\\\\\\\\\\\\\\\\\\\\
 \begin{frame}[c]{Symbolic Knowledge~\ccite{DBLP:journals/csur/CiattoSAMO24}}
     \begin{exampleblock}{Definition}
-        Symbolic knowledge is a type of \ac{KR} that uses \emph{symbols} to represent concepts, objects, and relationships in a structured and interpretable way.
+        Symbolic knowledge is a type of Knowledge Representation (KR) that uses \emph{symbols} to represent concepts, objects, and relationships in a structured and interpretable way.
         %
-        Symbolic \ac{KR} approaches must:
+        Symbolic KR approaches must:
         \begin{itemize}
             \item involve a set of symbols;
             \item symbols can be \emph{combined} following a set of rules;
@@ -126,10 +126,10 @@
 %\\\\\\\\\\\\\\\\\\\\\
 \begin{frame}[c]{Sub-symbolic Approaches~\ccite{DBLP:journals/csur/CiattoSAMO24}}
     \begin{exampleblock}{Definition}
-        Sub-symbolic knowledge is a type of \ac{KR} that represents information in a \emph{distributed} and implicit manner,
+        Sub-symbolic knowledge is a type of KR that represents information in a \emph{distributed} and implicit manner,
         often using \emph{numerical values} or \emph{vectors} to encode concepts and relationships.
         %
-        Sub-symbolic \ac{AI} methods include predictive models, based on \emph{statistical patterns} and associations in \emph{data}, rather than explicit rules or symbols.
+        Sub-symbolic Artificial Intelligence (AI) methods include predictive models, based on \emph{statistical patterns} and associations in \emph{data}, rather than explicit rules or symbols.
     \end{exampleblock}
 
     \begin{alertblock}{Applications}
@@ -139,7 +139,7 @@
                     \item Classification
                     \item Regression
                     \item Embeddings
-                    \item Generative \ac{AI}
+                    \item Generative AI
                 \end{itemize}
             }
         \end{multicols}
@@ -171,19 +171,22 @@
 
 %\\\\\\\\\\\\\\\\\\\\\
 \begin{frame}[c]{Thesis Goal}
+    \vspace{-1.2ex}
   \begin{alertblock}{Thesis Goal}
-    Develop methodologies and frameworks to engineer intelligent \ac{AI} systems,
-    focusing on \emph{\ac{SKI}} and \emph{\ac{SKE}} as foundations for human-like, autonomous, and interpretable artificial intelligence.
+    \small
+    Develop methodologies and frameworks to engineer intelligent AI systems,
+    focusing on \emph{Symbolic Knowledge Injection (SKI)} and \emph{Symbolic Knowledge Extraction (SKE)} as foundations for human-like, autonomous, and interpretable AI.
     %
-    This thesis aims to bridge symbolic and sub-symbolic paradigms, enabling \ac{AI} systems to learn, reason, and adapt transparently and robustly.
+    This thesis aims to bridge symbolic and sub-symbolic paradigms, enabling AI systems to learn, reason, and adapt transparently and robustly.
   \end{alertblock}
-
+    \vspace{-1ex}
   \begin{exampleblock}{Multi-Faceted Scientific Problem}
+    \small
     \begin{itemize}
       \item \textbf{How} to \underline{inject} and \underline{extract} symbolic knowledge in sub-symbolic models (methods, taxonomies, tools)
-      \item \textbf{How} to \emph{measure} the impact of \ac{SKI} and \ac{SKE} on accuracy, \underline{robustness}, and \underline{interpretability} (evaluation metrics)
-      \item \textbf{How} to design \ac{NeSy} \ac{AI} systems leveraging \ac{SKI}/\ac{SKE} in practical, high-stakes domains (software frameworks \& real-world deployment)
-      \item \textbf{How} to mitigate social and technical risks, e.g., bias, using \ac{SKI} techniques (trustworthiness \& ethics)
+      \item \textbf{How} to \emph{measure} the impact of SKI and SKE on accuracy, \underline{robustness}, and \underline{interpretability} (evaluation metrics)
+      \item \textbf{How} to design NeSy AI systems leveraging SKI/SKE in practical, high-stakes domains (software frameworks \& real-world deployment)
+      \item \textbf{How} to mitigate social and technical risks, e.g., bias, using SKI techniques (trustworthiness \& ethics)
     \end{itemize}
   \end{exampleblock}
 \end{frame}
@@ -241,7 +244,7 @@
 
     \begin{exampleblock}{Decompositional SKE Definition}
         if the method \emph{needs} to inspect (even partially) the internal parameters of the underlying black-box predictor,
-        e.g., neuron biases or connection weights for \acp{NN}, or support vectors for \acp{SVM}.
+        e.g., neuron biases or connection weights for NNs, or support vectors for SVMs.
     \end{exampleblock}
 
     \begin{exampleblock}{Pedagogical SKE Definition}
@@ -463,7 +466,7 @@
 %\\\\\\\\\\\\\\\\\\\\
 \begin{frame}[c]{NeSy AI for Disease Diagnosis \& Monitoring~\ccite{DBLP:conf/percom/MagniniCKSM25}}
     \footnotesize
-    \textbf{Goal}: Inject clinical knowledge via \ac{LTN} into neural models for diabetes diagnosis dataset.
+    \textbf{Goal}: Inject clinical knowledge via Logic Tensor Network (LTN) into neural models for diabetes diagnosis dataset.
 
     %--- MODELS & INFO ---
     \textbf{Evaluated models:} KNN, LR, DT, RF, MLP, \textbf{LTN}
@@ -474,7 +477,7 @@
 
     \vspace{-1mm}
     %--- METRICS ---
-    \textbf{Metrics:} accuracy, balanced accuracy, recall, F1, \ac{MCC}, logic adherence, robustness.
+    \textbf{Metrics:} accuracy, balanced accuracy, recall, F1, Matthews Correlation Coefficient (MCC), logic adherence, robustness.
 
     %--- RESULTS TABLE ---
     \input{tables/ski-diabetes-performance-metrics}
